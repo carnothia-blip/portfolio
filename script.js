@@ -1,18 +1,18 @@
 const projects = [
     {
       id: 1,
-      title: "Coding app for low-vision children",
-      image: "https://www.dummyimg.in/placeholder",
+      title: "브루다커피 리디자인",
+      image: "images/brewda.png",
     },
     {
       id: 2,
-      title: "Search",
-      image: "https://www.dummyimg.in/placeholder",
+      title: "이케아 리디자인",
+      image: "images/ikea.png",
     },
     {
       id: 3,
-      title: "Venice Paddle Tennis",
-      image: "https://www.dummyimg.in/placeholder",
+      title: "고양이 에버랜드",
+      image: "images/everland.png",
     },
     {
       id: 4,
