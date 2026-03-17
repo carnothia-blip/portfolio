@@ -1,0 +1,17 @@
+/* 브루다커피 리디자인 — 프로젝트 모달 스타일 */
+
+#modal-content .modal-title {
+    color: #FF7F18;
+}
+
+#modal-content .modal-header {
+    border-bottom-color: rgba(255, 127, 24, 0.2);
+}
+
+#modal-content .modal-detail-label {
+    color: #FF7F18;
+}
+
+#modal-content .modal-project-image {
+    border-color: rgba(255, 127, 24, 0.2);
+}
