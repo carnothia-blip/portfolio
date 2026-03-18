@@ -111,11 +111,11 @@ body {
     max-width: 1400px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 0 4rem;
     position: relative;
     height: 100%;
-    gap: 300px;
+    gap: 10vw;
 }
 
 .hero-text {
@@ -154,7 +154,7 @@ body {
 
 /* Hero Image & Hexagon */
 .hero-image-container {
-    flex: 1;
+    flex: unset;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -192,6 +192,7 @@ body {
     top: 12.59%;
     height: 74.81%;
     object-fit: cover;
+    object-position: 50% 25%;
 }
 
 /* Floating Tags */
@@ -314,6 +315,10 @@ body {
     color: var(--accent);
 }
 
+.project-card.has-modal {
+    cursor: pointer;
+}
+
 /* Responsive — 태블릿 */
 @media (max-width: 1100px) {
     .header-container {
@@ -321,7 +326,7 @@ body {
     }
 
     .hero-container {
-        gap: 48px;
+        gap: 6vw;
         padding: 0 2rem;
     }
 
@@ -390,5 +395,145 @@ body {
     .project-grid {
         grid-template-columns: 1fr;
         row-gap: 2.5rem;
+    }
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(92, 64, 51, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-container {
+    background: var(--bg);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 780px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(16px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.is-open .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: sticky;
+    top: 1.25rem;
+    float: right;
+    margin: 1.25rem 1.25rem 0 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0.5px solid var(--border);
+    background: var(--bg);
+    color: var(--brown-mid);
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: var(--surface);
+}
+
+.modal-content {
+    padding: 1.5rem 2rem 2.5rem;
+    clear: both;
+}
+
+.modal-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 0.5px solid var(--border);
+}
+
+.modal-title {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--brown-dark);
+    margin: 0 0 1rem;
+}
+
+.modal-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+}
+
+.modal-detail-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-detail-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.modal-detail-value {
+    font-size: 13px;
+    color: var(--brown-mid);
+}
+
+.modal-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-project-image {
+    width: 100%;
+    border-radius: 6px;
+    border: 0.5px solid var(--border);
+    object-fit: cover;
+}
+
+.modal-description p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--brown-mid);
+}
+
+@media (max-width: 768px) {
+    .modal-overlay {
+        padding: 1rem;
+        align-items: flex-end;
+    }
+
+    .modal-container {
+        max-height: 90vh;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .modal-content {
+        padding: 1rem 1.25rem 2rem;
     }
 }

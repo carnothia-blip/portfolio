@@ -1,0 +1,17 @@
+/* 이케아 리디자인 — 프로젝트 모달 스타일 */
+
+#modal-content .modal-title {
+    color: #3263A7;
+}
+
+#modal-content .modal-header {
+    border-bottom-color: rgba(50, 99, 167, 0.2);
+}
+
+#modal-content .modal-detail-label {
+    color: #3263A7;
+}
+
+#modal-content .modal-project-image {
+    border-color: rgba(50, 99, 167, 0.2);
+}
