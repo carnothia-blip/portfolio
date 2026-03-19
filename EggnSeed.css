@@ -1,0 +1,17 @@
+/* 에그앤씨드 리디자인 — 프로젝트 모달 스타일 */
+
+#modal-content .modal-title {
+    color: #EE3D21;
+}
+
+#modal-content .modal-header {
+    border-bottom-color: #F0EBE1;
+}
+
+#modal-content .modal-detail-label {
+    color: #EE3D21;
+}
+
+#modal-content .modal-project-image {
+    border-color: rgba(50, 99, 167, 0.2);
+}

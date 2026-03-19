@@ -25,7 +25,7 @@ const projects = [
             { label: "기간", value: "3주" },
             { label: "툴", value: "Figma, Kling, Premiere Pro" },
         ],
-        images: ["images/ikea.png"],
+        images: ["images/ikea_main.png"],
     },
     {
         id: 3,
@@ -39,9 +39,20 @@ const projects = [
             { label: "기간", value: "1주" },
             { label: "툴", value: "Figma, Whisk, Premiere Pro" },
         ],
-        images: ["images/everland.png"],
+        images: ["images/cat_merry_go_round.png"],
     },
-    { id: 4, title: "AR Working Space for Designer", image: "https://www.dummyimg.in/placeholder" },
+    { id: 4, title: "에그앤씨드",
+        image: "images/eyrie_logo.png",
+        cssFile: "EggnSeed.css",
+        hasModal: true,
+        description: "에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
+        details: [
+            { label: "역할", value: "UI/UX Designer" },
+            { label: "기간", value: "1주" },
+            { label: "툴", value: "Whisk, Claude" },
+        ],
+        images: ["images/Eyrie_main.png"],
+    },
     // { id: 5, title: "Data-visualization-rico", image: "https://www.dummyimg.in/placeholder" },
     // { id: 6, title: "Google UX Design Internship", image: "https://www.dummyimg.in/placeholder" },
     // { id: 7, title: "Internship", image: "https://www.dummyimg.in/placeholder" },
@@ -90,6 +101,7 @@ function closeModal() {
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
+    card.dataset.id = project.id;
     if (project.hasModal) card.classList.add('has-modal');
 
     card.innerHTML = `

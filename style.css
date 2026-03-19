@@ -298,6 +298,13 @@ body {
     transition: transform 0.35s ease;
 }
 
+/* 에그앤씨드 로고 이미지 조정 */
+.project-card[data-id="4"] .project-image {
+    object-fit: contain;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
 .project-card:hover .project-image {
     transform: scale(1.03);
 }
