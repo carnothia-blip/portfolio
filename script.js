@@ -41,16 +41,16 @@ const projects = [
         ],
         images: ["images/cat_merry_go_round.png"],
     },
-    { id: 4, title: "EggnSeed",
+    { id: 4, title: "에그앤씨드 리디자인",
         image: "images/eyrie_logo.png",
         imageClass: "contain",
         cssFile: "EggnSeed.css",
         hasModal: true,
-        description: "에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
+        description: "바이브코딩을 사용하여 에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
         details: [
             { label: "역할", value: "UI/UX Designer" },
             { label: "기간", value: "1주" },
-            { label: "툴", value: "Whisk, Claude" },
+            { label: "툴", value: "Whisk, Claude, Gemini" },
         ],
         images: ["images/Eyrie_main.png"],
     },
@@ -116,7 +116,7 @@ function closeModal() {
 
 function createProjectCard(project) {
     const card = document.createElement('div');
-    card.className = `project-card project-id-${project.id}`;
+    card.className = 'project-card';
 
     if (project.hasModal) card.classList.add('has-modal');
 
