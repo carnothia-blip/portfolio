@@ -14,4 +14,12 @@
 
 #modal-content .modal-project-image {
     border-color: rgba(50, 99, 167, 0.2);
+    background-color: #f1f1f1;
+    object-fit: contain;
+    padding: 1.5rem;
+}
+
+/* 메인 카드 이미지 배경색 (카드에 클래스가 있을 경우) */
+.project-card.project-id-4 .project-image-wrapper {
+    background-color: #f1f1f1;
 }

@@ -1,7 +1,7 @@
 const projects = [
     {
         id: 1,
-        title: "brewda",
+        title: "브루다커피 리디자인",
         image: "images/brewda.png",
         cssFile: "brewda.css",
         hasModal: true,
@@ -29,7 +29,7 @@ const projects = [
     },
     {
         id: 3,
-        title: "everland",
+        title: "고양이 에버랜드",
         image: "images/everland.png",
         cssFile: "everland.css",
         hasModal: true,
@@ -43,6 +43,7 @@ const projects = [
     },
     { id: 4, title: "EggnSeed",
         image: "images/eyrie_logo.png",
+        imageClass: "contain",
         cssFile: "EggnSeed.css",
         hasModal: true,
         description: "에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -53,7 +54,22 @@ const projects = [
         ],
         images: ["images/Eyrie_main.png"],
     },
-    // { id: 5, title: "Data-visualization-rico", image: "https://www.dummyimg.in/placeholder" },
+    {
+        id: 5,
+        title: "VODA OTT 서비스",
+        image: "images/vodalogo.png",
+        imageClass: "contain",
+        cssFile: "voda.css",
+        hasModal: true,
+        description: "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
+        details: [
+            { label: "역할", value: "UI/UX Designer" },
+            { label: "기간", value: "9일" },
+            { label: "툴", value: "허깅페이스, TMDB, figma, render, Claude, Gemini" },
+        ],
+        images: ["images/voda.png"],
+    },
+    
     // { id: 6, title: "Google UX Design Internship", image: "https://www.dummyimg.in/placeholder" },
     // { id: 7, title: "Internship", image: "https://www.dummyimg.in/placeholder" },
     // { id: 8, title: "Personal brand / Business / Visual design", image: "https://www.dummyimg.in/placeholder" },
@@ -100,13 +116,13 @@ function closeModal() {
 
 function createProjectCard(project) {
     const card = document.createElement('div');
-    card.className = 'project-card';
+    card.className = `project-card project-id-${project.id}`;
 
     if (project.hasModal) card.classList.add('has-modal');
 
     card.innerHTML = `
         <div class="project-image-wrapper">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <img src="${project.image}" alt="${project.title}" class="project-image ${project.imageClass || ''}">
         </div>
         <p class="project-title">${project.title}</p>
     `;
