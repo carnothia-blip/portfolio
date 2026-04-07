@@ -1,9 +1,9 @@
 const projects = [
     {
         id: 1,
-        title: "브루다커피 리디자인",
+        title: "brewda",
         image: "images/brewda.png",
-        cssFile: "브루다커피 리디자인.css",
+        cssFile: "brewda.css",
         hasModal: true,
         description: "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
         details: [
@@ -17,7 +17,7 @@ const projects = [
         id: 2,
         title: "이케아 리디자인",
         image: "images/ikea.png",
-        cssFile: "이케아 리디자인.css",
+        cssFile: "ikea.css",
         hasModal: true,
         description: "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
         details: [
@@ -29,9 +29,9 @@ const projects = [
     },
     {
         id: 3,
-        title: "고양이 에버랜드",
+        title: "everland",
         image: "images/everland.png",
-        cssFile: "고양이 에버랜드.css",
+        cssFile: "everland.css",
         hasModal: true,
         description: "고양이를 테마로 한 에버랜드 콘셉트 디자인 프로젝트입니다.",
         details: [
@@ -41,7 +41,7 @@ const projects = [
         ],
         images: ["images/cat_merry_go_round.png"],
     },
-    { id: 4, title: "에그앤씨드",
+    { id: 4, title: "EggnSeed",
         image: "images/eyrie_logo.png",
         cssFile: "EggnSeed.css",
         hasModal: true,
@@ -101,6 +101,7 @@ function closeModal() {
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
+
     if (project.hasModal) card.classList.add('has-modal');
 
     card.innerHTML = `
