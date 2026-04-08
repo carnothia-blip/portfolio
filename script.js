@@ -200,6 +200,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // About 모달 제어
     const aboutModal = document.getElementById('about-modal');
     const aboutBtn = document.getElementById('nav-about');
+    const emailLink = document.getElementById('email-link');
+
+    if (emailLink) {
+        emailLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = 'jiminjdo@gmail.com';
+            window.location.href = `mailto:${email}`;
+        });
+    }
 
     if (aboutBtn && aboutModal) {
         aboutBtn.addEventListener('click', () => {
