@@ -143,13 +143,39 @@ function renderProjects() {
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
 
+    // Project modal
     document.getElementById('modal-close').addEventListener('click', closeModal);
 
     document.getElementById('project-modal').addEventListener('click', (e) => {
         if (e.target === e.currentTarget) closeModal();
     });
 
+    // About modal
+    const aboutModal = document.getElementById('about-modal');
+    const aboutBtn = document.querySelector('.nav-link:last-child');
+
+    aboutBtn.addEventListener('click', () => {
+        aboutModal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    });
+
+    document.getElementById('about-modal-close').addEventListener('click', () => {
+        aboutModal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    });
+
+    aboutModal.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+            aboutModal.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+    });
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
+        if (e.key === 'Escape') {
+            closeModal();
+            aboutModal.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
     });
 });
