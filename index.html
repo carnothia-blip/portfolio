@@ -37,10 +37,10 @@
                             <div class="hexagon-bg"></div>
                             <img src="images/me.jpg" alt="Profile" class="profile-img">
                         </div>
-                        <div class="tag tag-ui"><span>UI</span></div>
+                        <div class="tag tag-ui"><span>UIUX</span></div>
                         <div class="tag tag-design"><span>Design</span></div>
-                        <div class="tag tag-business"><span>Business</span></div>
-                        <div class="tag tag-ux"><span>UX</span></div>
+                        <div class="tag tag-business"><span>Video</span></div>
+                        <div class="tag tag-ux"><span>Frontend</span></div>
                     </div>
                 </div>
             </div>
@@ -89,6 +89,38 @@
         </div>
     </div>
 
+    <!-- About Modal -->
+    ...
+    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal-container contact-modal-container">
+            <button class="modal-close" id="contact-modal-close" aria-label="닫기">&#x2715;</button>
+            <div class="modal-content contact-modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Contact Me</h2>
+                    <p class="about-subtitle">궁금한 점이나 프로젝트 제안을 보내주세요.</p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="user_name">Name</label>
+                        <input type="text" id="user_name" name="user_name" placeholder="이름을 입력해 주세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user_email">Email</label>
+                        <input type="email" id="user_email" name="user_email" placeholder="답변을 받을 이메일을 입력해 주세요" required>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="내용을 입력해 주세요" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        <span>Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Project Modal -->
     <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-container">
@@ -97,6 +129,7 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

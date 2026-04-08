@@ -172,6 +172,10 @@ function renderProjects() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // EmailJS 초기화 (본인의 Public Key로 교체하세요)
+    // 예: emailjs.init("abcd1234efgh");
+    emailjs.init("M1n0rDtfHwGM-EjRa");
+
     renderProjects();
 
     // 프로젝트 모달 닫기
@@ -201,12 +205,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutModal = document.getElementById('about-modal');
     const aboutBtn = document.getElementById('nav-about');
     const emailLink = document.getElementById('email-link');
+    const contactModal = document.getElementById('contact-modal');
 
     if (emailLink) {
         emailLink.addEventListener('click', (e) => {
             e.preventDefault();
-            const email = 'jiminjdo@gmail.com';
-            window.location.href = `mailto:${email}`;
+            // 메일 클라이언트를 여는 대신 Contact 모달을 엽니다.
+            closeModal('about-modal');
+            contactModal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
         });
     }
 
@@ -222,11 +229,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Contact 모달 제어
+    if (contactModal) {
+        document.getElementById('contact-modal-close').addEventListener('click', () => closeModal('contact-modal'));
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeModal('contact-modal');
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                // 전송 중 상태 표시
+                submitBtn.disabled = true;
+                submitBtn.classList.add('loading');
+                submitBtn.querySelector('span').textContent = 'Sending...';
+
+                // EmailJS 전송 (본인의 Service ID와 Template ID로 교체하세요)
+                // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                emailjs.sendForm('service_zy7gx5c', 'template_2ogdzdf', this)
+                    .then(function() {
+                        alert('메일이 성공적으로 전송되었습니다!');
+                        contactForm.reset();
+                        closeModal('contact-modal');
+                    }, function(error) {
+                        alert('전송에 실패했습니다: ' + JSON.stringify(error));
+                    })
+                    .finally(function() {
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('loading');
+                        submitBtn.querySelector('span').textContent = 'Send Message';
+                    });
+            });
+        }
+    }
+
     // ESC 키 공통 처리
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeModal('project-modal');
             closeModal('about-modal');
+            closeModal('contact-modal');
         }
     });
 });
