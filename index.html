@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jimin Do - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="brewda.css">
-    <link rel="stylesheet" href="ikea.css">
-    <link rel="stylesheet" href="everland.css">
-    <link rel="stylesheet" href="EggnSeed.css">
-    <link rel="stylesheet" href="voda.css">
 </head>
 <body>
     <!-- Header -->
@@ -19,8 +14,8 @@
                 <span>JIMIN DO</span>
             </div>
             <nav class="nav">
-                <button class="nav-link active">Work</button>
-                <button class="nav-link">About</button>
+                <button id="nav-work" class="nav-link active">Work</button>
+                <button id="nav-about" class="nav-link">About</button>
             </nav>
         </div>
     </header>
@@ -33,7 +28,7 @@
                 <div class="hero-text">
                     <h1 class="hero-title">I'm Jimin Do</h1>
                     <div class="hero-badge">
-                        <span>UI UX Designer @ Google</span>
+                        <span>UI UX Designer & Frontend Developer & Video Maker</span>
                     </div>
                 </div>
                 <div class="hero-image-container">
@@ -48,7 +43,6 @@
                         <div class="tag tag-ux"><span>UX</span></div>
                     </div>
                 </div>
-              
             </div>
         </section>
 
@@ -65,13 +59,13 @@
             <div class="modal-content about-modal-content">
                 <div class="about-header">
                     <h2 class="about-title">Jimin Do</h2>
-                    <p class="about-subtitle">UI/UX Designer & Frontend Developer</p>
+                    <p class="about-subtitle">UI/UX Designer & Frontend Developer & Video Maker</p>
                 </div>
                 <div class="about-bio">
                     <p>사용자 경험을 중심에 두고, 시각적으로 아름다운 인터페이스를 만드는 것을 좋아합니다. 디자인과 개발의 경계에서 일하며, 두 영역을 자유롭게 넘나드는 것을 즐깁니다.</p>
                 </div>
                 <div class="about-links">
-                    <a href="mailto:your@email.com" class="about-link">
+                    <a href="mailto:jiminjdo@gmail.com" class="about-link">
                         <span class="about-link-icon">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -95,7 +89,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Project Modal -->
     <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
         <div class="modal-container">
             <button class="modal-close" id="modal-close" aria-label="닫기">&#x2715;</button>

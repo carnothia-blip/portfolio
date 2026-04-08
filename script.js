@@ -12,6 +12,7 @@ const projects = [
             { label: "툴", value: "Figma, Kling, Premiere Pro" },
         ],
         images: ["images/brewda.png"],
+        link: "https://drive.google.com/drive/folders/1SM-7d5xRPs8XTvPvRHy-jigINDG-Qxs3?usp=drive_link",
     },
     {
         id: 2,
@@ -26,6 +27,7 @@ const projects = [
             { label: "툴", value: "Figma, Kling, Premiere Pro" },
         ],
         images: ["images/ikea_main.png"],
+        link: "https://carnothia-blip.github.io/projectA/",
     },
     {
         id: 3,
@@ -40,8 +42,11 @@ const projects = [
             { label: "툴", value: "Figma, Whisk, Premiere Pro" },
         ],
         images: ["images/cat_merry_go_round.png"],
+        link: "https://drive.google.com/drive/folders/1tfvu9Fw_JYM0AyPz7opeD0qdQM_RnMep?usp=sharing",
     },
-    { id: 4, title: "에그앤씨드 리디자인",
+    {
+        id: 4,
+        title: "에그앤씨드 리디자인",
         image: "images/eyrie_logo.png",
         imageClass: "contain",
         cssFile: "EggnSeed.css",
@@ -53,6 +58,7 @@ const projects = [
             { label: "툴", value: "Whisk, Claude, Gemini" },
         ],
         images: ["images/Eyrie_main.png"],
+        link: "https://carnothia-blip.github.io/ProjectB/",
     },
     {
         id: 5,
@@ -68,11 +74,8 @@ const projects = [
             { label: "툴", value: "허깅페이스, TMDB, figma, render, Claude, Gemini" },
         ],
         images: ["images/voda.png"],
+        link: "https://voda-r4s5.onrender.com/",
     },
-    
-    // { id: 6, title: "Google UX Design Internship", image: "https://www.dummyimg.in/placeholder" },
-    // { id: 7, title: "Internship", image: "https://www.dummyimg.in/placeholder" },
-    // { id: 8, title: "Personal brand / Business / Visual design", image: "https://www.dummyimg.in/placeholder" },
 ];
 
 function buildModalContent(project) {
@@ -83,9 +86,24 @@ function buildModalContent(project) {
         </div>
     `).join('');
 
-    const imagesHTML = project.images.map(src => `
-        <img src="${src}" alt="${project.title}" class="modal-project-image">
-    `).join('');
+    const imagesHTML = project.images.map(src => {
+        const imgTag = `<img src="${src}" alt="${project.title}" class="modal-project-image">`;
+        if (project.link) {
+            return `
+        <a href="${project.link}" target="_blank" rel="noopener" class="modal-image-link" title="프로젝트 보러가기">
+            ${imgTag}
+            <span class="modal-image-overlay">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                프로젝트 보러가기
+            </span>
+        </a>`;
+        }
+        return imgTag;
+    }).join('');
 
     return `
         <link rel="stylesheet" href="${project.cssFile}">
@@ -108,17 +126,23 @@ function openModal(project) {
     document.body.style.overflow = 'hidden';
 }
 
-function closeModal() {
-    const modal = document.getElementById('project-modal');
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId || 'project-modal');
     modal.classList.remove('is-open');
-    document.body.style.overflow = '';
+    if (!document.querySelector('.modal-overlay.is-open')) {
+        document.body.style.overflow = '';
+    }
 }
 
 function createProjectCard(project) {
     const card = document.createElement('div');
     card.className = 'project-card';
-
-    if (project.hasModal) card.classList.add('has-modal');
+    if (project.hasModal) {
+        card.classList.add('has-modal');
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.setAttribute('aria-label', `${project.title} 상세보기`);
+    }
 
     card.innerHTML = `
         <div class="project-image-wrapper">
@@ -128,7 +152,14 @@ function createProjectCard(project) {
     `;
 
     if (project.hasModal) {
-        card.addEventListener('click', () => openModal(project));
+        const handleOpen = () => openModal(project);
+        card.addEventListener('click', handleOpen);
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleOpen();
+            }
+        });
     }
 
     return card;
@@ -143,39 +174,50 @@ function renderProjects() {
 document.addEventListener('DOMContentLoaded', () => {
     renderProjects();
 
-    // Project modal
-    document.getElementById('modal-close').addEventListener('click', closeModal);
-
+    // 프로젝트 모달 닫기
+    document.getElementById('modal-close').addEventListener('click', () => closeModal('project-modal'));
     document.getElementById('project-modal').addEventListener('click', (e) => {
-        if (e.target === e.currentTarget) closeModal();
+        if (e.target === e.currentTarget) closeModal('project-modal');
     });
 
-    // About modal
+    // Work 버튼 클릭 시 스크롤 이동 기능
+    const workBtn = document.getElementById('nav-work');
+    const workSection = document.getElementById('work');
+
+    if (workBtn && workSection) {
+        workBtn.addEventListener('click', () => {
+            const headerOffset = 100;
+            const elementPosition = workSection.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // About 모달 제어
     const aboutModal = document.getElementById('about-modal');
-    const aboutBtn = document.querySelector('.nav-link:last-child');
+    const aboutBtn = document.getElementById('nav-about');
 
-    aboutBtn.addEventListener('click', () => {
-        aboutModal.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-    });
+    if (aboutBtn && aboutModal) {
+        aboutBtn.addEventListener('click', () => {
+            aboutModal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        });
 
-    document.getElementById('about-modal-close').addEventListener('click', () => {
-        aboutModal.classList.remove('is-open');
-        document.body.style.overflow = '';
-    });
+        document.getElementById('about-modal-close').addEventListener('click', () => closeModal('about-modal'));
+        aboutModal.addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) closeModal('about-modal');
+        });
+    }
 
-    aboutModal.addEventListener('click', (e) => {
-        if (e.target === e.currentTarget) {
-            aboutModal.classList.remove('is-open');
-            document.body.style.overflow = '';
-        }
-    });
-
+    // ESC 키 공통 처리
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeModal();
-            aboutModal.classList.remove('is-open');
-            document.body.style.overflow = '';
+            closeModal('project-modal');
+            closeModal('about-modal');
         }
     });
 });
