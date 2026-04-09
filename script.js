@@ -11,7 +11,7 @@ const projects = [
             { label: "기간", value: "2주" },
             { label: "툴", value: "Figma, Kling, Premiere Pro, Claude, Gemini" },
         ],
-        images: ["images/brewda1.png"],
+        images: ["images/brewda2.png"],
         link: "https://drive.google.com/drive/folders/1SM-7d5xRPs8XTvPvRHy-jigINDG-Qxs3?usp=drive_link",
     },
     {
