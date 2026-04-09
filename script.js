@@ -9,9 +9,9 @@ const projects = [
         details: [
             { label: "역할", value: "Video Creator" },
             { label: "기간", value: "2주" },
-            { label: "툴", value: "Figma, Kling, Premiere Pro" },
+            { label: "툴", value: "Figma, Kling, Premiere Pro, Claude, Gemini" },
         ],
-        images: ["images/brewda.png"],
+        images: ["images/brewda1.png"],
         link: "https://drive.google.com/drive/folders/1SM-7d5xRPs8XTvPvRHy-jigINDG-Qxs3?usp=drive_link",
     },
     {
@@ -24,7 +24,7 @@ const projects = [
         details: [
             { label: "역할", value: "UI/UX Designer" },
             { label: "기간", value: "3주" },
-            { label: "툴", value: "Figma, Kling, Premiere Pro" },
+            { label: "툴", value: "Figma, Kling, Premiere Pro, Claude, Gemini" },
         ],
         images: ["images/ikea_main.png"],
         link: "https://carnothia-blip.github.io/projectA/",
@@ -39,7 +39,7 @@ const projects = [
         details: [
             { label: "역할", value: "UI/UX Designer, Video Creator" },
             { label: "기간", value: "1주" },
-            { label: "툴", value: "Figma, Whisk, Premiere Pro" },
+            { label: "툴", value: "Figma, Whisk, Premiere Pro, Gemini, ChatGPT" },
         ],
         images: ["images/cat_merry_go_round.png"],
         link: "https://drive.google.com/drive/folders/1tfvu9Fw_JYM0AyPz7opeD0qdQM_RnMep?usp=sharing",
