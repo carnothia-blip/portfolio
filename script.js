@@ -2,7 +2,7 @@ const projects = [
     {
         id: 1,
         title: "브루다커피 리디자인",
-        image: "images/brewda.png",
+        image: "images/brewdaa.png",
         cssFile: "brewda.css",
         hasModal: true,
         description: "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
@@ -17,7 +17,7 @@ const projects = [
     {
         id: 2,
         title: "이케아 리디자인",
-        image: "images/ikea.png",
+        image: "images/ikeaa.png",
         cssFile: "ikea.css",
         hasModal: true,
         description: "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -32,7 +32,7 @@ const projects = [
     {
         id: 3,
         title: "고양이 에버랜드",
-        image: "images/everland.png",
+        image: "images/cat3.png",
         cssFile: "everland.css",
         hasModal: true,
         description: "고양이를 테마로 한 에버랜드 콘셉트 디자인 프로젝트입니다.",
@@ -47,7 +47,7 @@ const projects = [
     {
         id: 4,
         title: "에그앤씨드 리디자인",
-        image: "images/eyrie_logo.png",
+        image: "images/eyrie1.png",
         imageClass: "contain",
         cssFile: "EggnSeed.css",
         hasModal: true,
@@ -63,7 +63,7 @@ const projects = [
     {
         id: 5,
         title: "VODA OTT 서비스",
-        image: "images/vodalogo.png",
+        image: "images/voda1.png",
         imageClass: "contain",
         cssFile: "voda.css",
         hasModal: true,
