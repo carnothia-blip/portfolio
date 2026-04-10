@@ -17,7 +17,7 @@ const projects = [
     {
         id: 2,
         title: "이케아 리디자인",
-        image: "images/ikeaa.png",
+        image: "images/ikea2.png",
         cssFile: "ikea.css",
         hasModal: true,
         description: "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -48,7 +48,6 @@ const projects = [
         id: 4,
         title: "에그앤씨드 리디자인",
         image: "images/eyrie1.png",
-        imageClass: "contain",
         cssFile: "EggnSeed.css",
         hasModal: true,
         description: "바이브코딩을 사용하여 에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -64,7 +63,6 @@ const projects = [
         id: 5,
         title: "VODA OTT 서비스",
         image: "images/voda1.png",
-        imageClass: "contain",
         cssFile: "voda.css",
         hasModal: true,
         description: "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
@@ -76,6 +74,7 @@ const projects = [
         images: ["images/voda.png"],
         link: "https://voda-r4s5.onrender.com/",
     },
+    
 ];
 
 function buildModalContent(project) {

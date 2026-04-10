@@ -15,8 +15,7 @@
 #modal-content .modal-project-image {
     border-color: #ec4899;
     background-color: #d4d4d8;
-    object-fit: contain;
-    padding: 1.5rem;
+    object-fit: cover;
 }
 
 /* 메인 카드 이미지 배경색 (카드에 클래스가 있을 경우) */
