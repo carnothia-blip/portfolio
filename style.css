@@ -518,6 +518,37 @@ body {
   color: var(--brown-mid);
 }
 
+.modal-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2rem; /* 이미지와의 간격 */
+}
+
+.modal-action-btn {
+  width: 176px;
+  height: 54px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  color: var(--brown-dark);
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.modal-action-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent-dark);
+}
+
 .modal-images {
   display: flex;
   flex-direction: column;
