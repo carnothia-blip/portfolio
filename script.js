@@ -12,6 +12,7 @@ const projects = [
         text: "영상 보기",
         link: "https://drive.google.com/file/d/1wn4oqjrEmOkdaFK_wG-8DF93EXFZ3Epk/view?usp=drive_link",
       },
+      { text: "프로토타입", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
     ],
     description:
       "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
@@ -22,7 +23,7 @@ const projects = [
       },
       { label: "배포매체", value: "Mobile" },
       { label: "작업기간", value: "2주" },
-      { label: "본인 기여도", value: "45%" },
+      { label: "본인 기여도", value: "25%" },
       { label: "특징", value: "접근성 준수/원터치 주문결제" },
     ],
     images: ["images/brewda2.png"],
@@ -107,7 +108,7 @@ const projects = [
     cssFile: "voda.css",
     hasModal: true,
     buttons: [
-      { text: "기획서 보기", link: "" },
+      { text: "기획서 보기", link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1" },
       { text: "사이트 보기", link: "https://voda-r4s5.onrender.com/" },
     ],
     description:
@@ -119,7 +120,7 @@ const projects = [
       },
       { label: "배포매체", value: "Desktop, Mobile" },
       { label: "작업기간", value: "9일" },
-      { label: "본인 기여도", value: "30%" },
+      { label: "본인 기여도", value: "16%" },
       {
         label: "특징",
         value: "TMDB와 허깅페이스의 API 연결과 AI챗봇을 활용한 OTT 서비스 구축",
@@ -138,14 +139,6 @@ function buildModalContent(project) {
             <span class="modal-detail-label">${d.label}</span>
             <span class="modal-detail-value">${d.value}</span>
         </div>
-    `,
-    )
-    .join("");
-
-  const buttonsHTML = (project.buttons || [])
-    .map(
-      (btn) => `
-        <a href="${btn.link || '#'}" target="_blank" rel="noopener" class="modal-action-btn">${btn.text}</a>
     `,
     )
     .join("");
@@ -176,9 +169,6 @@ function buildModalContent(project) {
         <div class="modal-header">
             <h2 class="modal-title">${project.title}</h2>
             <div class="modal-details">${detailsHTML}</div>
-        </div>
-        <div class="modal-action-buttons">
-            ${buttonsHTML}
         </div>
         <div class="modal-images">${imagesHTML}</div>
         <div class="modal-description">
@@ -213,20 +203,37 @@ function createProjectCard(project) {
     card.setAttribute("aria-label", `${project.title} 상세보기`);
   }
 
+  const buttonsHTML = (project.buttons || [])
+    .map(
+      (btn) => `
+        <a href="${btn.link || '#'}" target="_blank" rel="noopener" class="project-card-btn">${btn.text}</a>
+    `,
+    )
+    .join("");
+
   card.innerHTML = `
         <div class="project-image-wrapper">
             <img src="${project.image}" alt="${project.title}" class="project-image ${project.imageClass || ""}">
+            <div class="project-card-buttons">
+                ${buttonsHTML}
+            </div>
         </div>
         <p class="project-title">${project.title}</p>
     `;
 
   if (project.hasModal) {
-    const handleOpen = () => openModal(project);
+    const handleOpen = (e) => {
+      // 버튼 클릭 시에는 모달을 열지 않음
+      if (e.target.closest('.project-card-btn')) return;
+      openModal(project);
+    };
+    
     card.addEventListener("click", handleOpen);
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
+        if (e.target.closest('.project-card-btn')) return;
         e.preventDefault();
-        handleOpen();
+        handleOpen(e);
       }
     });
   }

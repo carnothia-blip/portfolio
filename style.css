@@ -163,6 +163,48 @@ body {
   white-space: nowrap;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-btn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-btn.primary {
+  background-color: var(--accent);
+  color: var(--bg);
+  border: 1px solid var(--accent);
+}
+
+.hero-btn.primary:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.hero-btn.secondary {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.hero-btn.secondary:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
 /* Hero Image & Hexagon */
 .hero-image-container {
   flex: unset;
@@ -293,12 +335,56 @@ body {
 }
 
 .project-image-wrapper {
+  position: relative;
   width: 100%;
   overflow: hidden;
   border-radius: 6px;
   aspect-ratio: 612 / 456.55;
   background-color: var(--surface);
   border: 0.5px solid var(--border);
+}
+
+.project-card-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(92, 64, 51, 0.8) 0%, rgba(92, 64, 51, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.project-card:hover .project-card-buttons {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.project-card-btn {
+  padding: 8px 16px;
+  background-color: var(--bg);
+  color: var(--brown-dark);
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
 }
 
 .project-image {
@@ -389,6 +475,10 @@ body {
     align-items: center;
     text-align: center;
     order: 2;
+  }
+
+  .hero-buttons {
+    justify-content: center;
   }
 
   .hero-image-container {
