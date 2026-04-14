@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     title: "브루다커피 리디자인",
     image: "images/brewdaa.png",
-    cssFile: "brewda.css",
+    cssFile: "css/brewda.css",
     hasModal: true,
     buttons: [
       { text: "기획서 보기", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
@@ -32,7 +32,7 @@ const projects = [
     id: 2,
     title: "이케아 리디자인",
     image: "images/ikea2.png",
-    cssFile: "ikea.css",
+    cssFile: "css/ikea.css",
     hasModal: true,
     buttons: [
       { text: "기획서 보기", link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az" },
@@ -59,7 +59,7 @@ const projects = [
     id: 3,
     title: "고양이 에버랜드",
     image: "images/cat3.png",
-    cssFile: "everland.css",
+    cssFile: "css/everland.css",
     hasModal: true,
     buttons: [
       { text: "기획서 보기", link: "https://docs.google.com/presentation/d/1rC1pyTt11BtHd7DGCzfuen5x6_ZLcO5g/edit?usp=sharing&ouid=101785610843370507682&rtpof=true&sd=true" },
@@ -84,7 +84,7 @@ const projects = [
     id: 4,
     title: "에그앤씨드 리디자인",
     image: "images/eyrie1.png",
-    cssFile: "EggnSeed.css",
+    cssFile: "css/EggnSeed.css",
     hasModal: true,
     buttons: [
       { text: "사이트 보기", link: "https://carnothia-blip.github.io/ProjectB/" },
@@ -105,7 +105,7 @@ const projects = [
     id: 5,
     title: "VODA OTT 서비스",
     image: "images/voda1.png",
-    cssFile: "voda.css",
+    cssFile: "css/voda.css",
     hasModal: true,
     buttons: [
       { text: "기획서 보기", link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1" },
@@ -247,12 +247,38 @@ function renderProjects() {
   projects.forEach((project) => grid.appendChild(createProjectCard(project)));
 }
 
+function animateHeroTitle() {
+  const heroTitle = document.querySelector(".hero-title");
+  if (!heroTitle) return;
+
+  const paragraphs = heroTitle.querySelectorAll("p");
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+
+  paragraphs.forEach((paragraph, index) => {
+    // Split text into characters
+    const splitText = new SplitText(paragraph, { type: "chars" });
+    const chars = splitText.chars;
+
+    // Animate characters from bottom to top
+    tl.from(chars, {
+      duration: 0.5,
+      opacity: 0,
+      y: 20,
+      stagger: 0.03,
+      ease: "power3.out"
+    }, index === 0 ? 0 : ">"); // 첫 번째는 0에서 시작, 이후는 이전 애니메이션 끝나고 시작
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // EmailJS 초기화 (본인의 Public Key로 교체하세요)
   // 예: emailjs.init("abcd1234efgh");
   emailjs.init("M1n0rDtfHwGM-EjRa");
 
   renderProjects();
+
+  // Animate hero title
+  animateHeroTitle();
 
   // 프로젝트 모달 닫기
   document
@@ -262,23 +288,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === e.currentTarget) closeModal("project-modal");
   });
 
-  // Work 버튼 클릭 시 스크롤 이동 기능
-  const workBtn = document.getElementById("nav-work");
-  const workSection = document.getElementById("work");
+  // 네비게이션 버튼 클릭 시 스크롤 이동 기능
+  const scrollTargets = [
+    { btnId: "nav-AboutMe", targetId: "about" },
+    { btnId: "nav-work", targetId: "work" }
+  ];
 
-  if (workBtn && workSection) {
-    workBtn.addEventListener("click", () => {
-      const headerOffset = 100;
-      const elementPosition = workSection.getBoundingClientRect().top;
-      const offsetPosition =
-        elementPosition + window.pageYOffset - headerOffset;
+  scrollTargets.forEach(({ btnId, targetId }) => {
+    const btn = document.getElementById(btnId);
+    const target = document.getElementById(targetId);
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
+    if (btn && target) {
+      btn.addEventListener("click", () => {
+        const headerOffset = 100;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
       });
-    });
-  }
+    }
+  });
 
   // About 모달 제어
   const aboutModal = document.getElementById("about-modal");
