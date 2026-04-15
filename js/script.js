@@ -6,13 +6,23 @@ const projects = [
     cssFile: "css/brewda.css",
     hasModal: true,
     buttons: [
-      { text: "기획서", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
-      { text: "프로토타입", link: "https://www.figma.com/proto/a7ypZWAQMTE4NtIf8HpwnU/3%ED%8C%80-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4-2&p=f&viewport=869%2C591%2C0.09&t=oqjoSrRrrPwwUn1t-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A59&page-id=0%3A1" },
-      { text: "영상 스토리보드", link: "https://drive.google.com/file/d/1VtCktllckXHneOwL14FuqF0Z4pwQhnhd/view?usp=sharing" },
+      {
+        text: "기획서",
+        link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi",
+      },
+      {
+        text: "프로토타입",
+        link: "https://www.figma.com/proto/a7ypZWAQMTE4NtIf8HpwnU/3%ED%8C%80-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4-2&p=f&viewport=869%2C591%2C0.09&t=oqjoSrRrrPwwUn1t-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A59&page-id=0%3A1",
+      },
+      {
+        text: "영상 스토리보드",
+        link: "https://drive.google.com/file/d/1VtCktllckXHneOwL14FuqF0Z4pwQhnhd/view?usp=sharing",
+      },
       {
         text: "영상",
         link: "https://drive.google.com/file/d/1wn4oqjrEmOkdaFK_wG-8DF93EXFZ3Epk/view?usp=drive_link",
       },
+      { text: "개요", link: "" },
     ],
     description:
       "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
@@ -35,10 +45,23 @@ const projects = [
     cssFile: "css/ikea.css",
     hasModal: true,
     buttons: [
-      { text: "기획서", link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az" },
-      { text: "사이트 보기", link: "https://carnothia-blip.github.io/projectA/" },
-      { text: "영상 스토리보드 보기", link: "https://drive.google.com/file/d/150jNPMyDx24NxEDgknYGpfXrazamY8gj/view?usp=sharing" },
-      { text: "영상 보기", link: "https://drive.google.com/file/d/1zxNc-q8Sh0XP6I4rlaGMtL4jKt4lab_l/view?usp=sharing" },
+      {
+        text: "기획서",
+        link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az",
+      },
+      {
+        text: "사이트",
+        link: "https://carnothia-blip.github.io/projectA/",
+      },
+      {
+        text: "영상 스토리보드",
+        link: "https://drive.google.com/file/d/150jNPMyDx24NxEDgknYGpfXrazamY8gj/view?usp=sharing",
+      },
+      {
+        text: "영상",
+        link: "https://drive.google.com/file/d/1zxNc-q8Sh0XP6I4rlaGMtL4jKt4lab_l/view?usp=sharing",
+      },
+      { text: "개요", link: "" },
     ],
     description:
       "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -53,7 +76,6 @@ const projects = [
       { label: "특징", value: "메인페이지" },
     ],
     images: ["images/ikea_main.png"],
-    
   },
   {
     id: 3,
@@ -62,9 +84,19 @@ const projects = [
     cssFile: "css/everland.css",
     hasModal: true,
     buttons: [
-      { text: "기획서 보기", link: "https://docs.google.com/presentation/d/1rC1pyTt11BtHd7DGCzfuen5x6_ZLcO5g/edit?usp=sharing&ouid=101785610843370507682&rtpof=true&sd=true" },
-      { text: "영상 스토리보드 보기", link: "https://drive.google.com/file/d/1WBPIBWhSDrPxGNUlW_YSUB6oPQqSpvsx/view?usp=sharing" },
-      { text: "영상 보기", link: "https://drive.google.com/file/d/1IzsA52O3Khc84TLiNudwQUFKNLrXnIru/view?usp=sharing" },
+      {
+        text: "기획서",
+        link: "https://docs.google.com/presentation/d/1rC1pyTt11BtHd7DGCzfuen5x6_ZLcO5g/edit?usp=sharing&ouid=101785610843370507682&rtpof=true&sd=true",
+      },
+      {
+        text: "영상 스토리보드",
+        link: "https://drive.google.com/file/d/1WBPIBWhSDrPxGNUlW_YSUB6oPQqSpvsx/view?usp=sharing",
+      },
+      {
+        text: "영상",
+        link: "https://drive.google.com/file/d/1IzsA52O3Khc84TLiNudwQUFKNLrXnIru/view?usp=sharing",
+      },
+      { text: "개요", link: "" },
     ],
     description: "고양이를 테마로 한 에버랜드 콘셉트 디자인 프로젝트입니다.",
     details: [
@@ -78,7 +110,6 @@ const projects = [
       { label: "특징", value: "AI를 이용한 영상제작" },
     ],
     images: ["images/cat_merry_go_round.png"],
-    
   },
   {
     id: 4,
@@ -87,7 +118,11 @@ const projects = [
     cssFile: "css/EggnSeed.css",
     hasModal: true,
     buttons: [
-      { text: "사이트 보기", link: "https://carnothia-blip.github.io/ProjectB/" },
+      {
+        text: "사이트",
+        link: "https://carnothia-blip.github.io/ProjectB/",
+      },
+      { text: "개요", link: "" },
     ],
     description:
       "바이브코딩을 사용하여 에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
@@ -99,7 +134,6 @@ const projects = [
       { label: "특징", value: "바이브코딩으로 구현" },
     ],
     images: ["images/Eyrie_main.png"],
-    
   },
   {
     id: 5,
@@ -108,8 +142,12 @@ const projects = [
     cssFile: "css/voda.css",
     hasModal: true,
     buttons: [
-      { text: "기획서 보기", link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1" },
-      { text: "사이트 보기", link: "https://voda-r4s5.onrender.com/" },
+      {
+        text: "기획서",
+        link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1",
+      },
+      { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
+      { text: "개요", link: "" },
     ],
     description:
       "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
@@ -127,7 +165,6 @@ const projects = [
       },
     ],
     images: ["images/voda.png"],
-    
   },
 ];
 
@@ -196,19 +233,15 @@ function closeModal(modalId) {
 function createProjectCard(project) {
   const card = document.createElement("div");
   card.className = "project-card";
-  if (project.hasModal) {
-    card.classList.add("has-modal");
-    card.setAttribute("tabindex", "0");
-    card.setAttribute("role", "button");
-    card.setAttribute("aria-label", `${project.title} 상세보기`);
-  }
 
+  // 버튼들 생성
   const buttonsHTML = (project.buttons || [])
-    .map(
-      (btn) => `
-        <a href="${btn.link || '#'}" target="_blank" rel="noopener" class="project-card-btn">${btn.text}</a>
-    `,
-    )
+    .map((btn) => {
+      if (btn.text === "개요") {
+        return `<button type="button" class="project-card-btn overview-btn">${btn.text}</button>`;
+      }
+      return `<a href="${btn.link || "#"}" target="_blank" rel="noopener" class="project-card-btn">${btn.text}</a>`;
+    })
     .join("");
 
   card.innerHTML = `
@@ -221,20 +254,11 @@ function createProjectCard(project) {
         <p class="project-title">${project.title}</p>
     `;
 
-  if (project.hasModal) {
-    const handleOpen = (e) => {
-      // 버튼 클릭 시에는 모달을 열지 않음
-      if (e.target.closest('.project-card-btn')) return;
+  // "개요" 버튼 클릭 이벤트 연결
+  const overviewBtn = card.querySelector(".overview-btn");
+  if (overviewBtn && project.hasModal) {
+    overviewBtn.addEventListener("click", (e) => {
       openModal(project);
-    };
-    
-    card.addEventListener("click", handleOpen);
-    card.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        if (e.target.closest('.project-card-btn')) return;
-        e.preventDefault();
-        handleOpen(e);
-      }
     });
   }
 
@@ -260,13 +284,17 @@ function animateHeroTitle() {
     const chars = splitText.chars;
 
     // Animate characters from bottom to top
-    tl.from(chars, {
-      duration: 0.5,
-      opacity: 0,
-      y: 20,
-      stagger: 0.03,
-      ease: "power3.out"
-    }, index === 0 ? 0 : ">"); // 첫 번째는 0에서 시작, 이후는 이전 애니메이션 끝나고 시작
+    tl.from(
+      chars,
+      {
+        duration: 0.5,
+        opacity: 0,
+        y: 20,
+        stagger: 0.03,
+        ease: "power3.out",
+      },
+      index === 0 ? 0 : ">",
+    ); // 첫 번째는 0에서 시작, 이후는 이전 애니메이션 끝나고 시작
   });
 }
 
@@ -291,7 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 네비게이션 버튼 클릭 시 스크롤 이동 기능
   const scrollTargets = [
     { btnId: "nav-AboutMe", targetId: "about", offset: 50 },
-    { btnId: "nav-work", targetId: "work", offset: 100 }
+    { btnId: "nav-work", targetId: "work", offset: 100 },
   ];
 
   scrollTargets.forEach(({ btnId, targetId, offset }) => {
@@ -302,7 +330,8 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const headerOffset = offset;
         const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
