@@ -290,17 +290,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 네비게이션 버튼 클릭 시 스크롤 이동 기능
   const scrollTargets = [
-    { btnId: "nav-AboutMe", targetId: "about" },
-    { btnId: "nav-work", targetId: "work" }
+    { btnId: "nav-AboutMe", targetId: "about", offset: 50 },
+    { btnId: "nav-work", targetId: "work", offset: 100 }
   ];
 
-  scrollTargets.forEach(({ btnId, targetId }) => {
+  scrollTargets.forEach(({ btnId, targetId, offset }) => {
     const btn = document.getElementById(btnId);
     const target = document.getElementById(targetId);
 
     if (btn && target) {
       btn.addEventListener("click", () => {
-        const headerOffset = 100;
+        const headerOffset = offset;
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
