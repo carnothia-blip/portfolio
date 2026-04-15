@@ -6,13 +6,13 @@ const projects = [
     cssFile: "css/brewda.css",
     hasModal: true,
     buttons: [
-      { text: "기획서 보기", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
-      { text: "영상 스토리보드 보기", link: "https://drive.google.com/file/d/1VtCktllckXHneOwL14FuqF0Z4pwQhnhd/view?usp=sharing" },
+      { text: "기획서", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
+      { text: "프로토타입", link: "https://www.figma.com/proto/a7ypZWAQMTE4NtIf8HpwnU/3%ED%8C%80-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4-2&p=f&viewport=869%2C591%2C0.09&t=oqjoSrRrrPwwUn1t-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A59&page-id=0%3A1" },
+      { text: "영상 스토리보드", link: "https://drive.google.com/file/d/1VtCktllckXHneOwL14FuqF0Z4pwQhnhd/view?usp=sharing" },
       {
-        text: "영상 보기",
+        text: "영상",
         link: "https://drive.google.com/file/d/1wn4oqjrEmOkdaFK_wG-8DF93EXFZ3Epk/view?usp=drive_link",
       },
-      { text: "프로토타입", link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi" },
     ],
     description:
       "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
@@ -35,10 +35,10 @@ const projects = [
     cssFile: "css/ikea.css",
     hasModal: true,
     buttons: [
-      { text: "기획서 보기", link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az" },
+      { text: "기획서", link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az" },
+      { text: "사이트 보기", link: "https://carnothia-blip.github.io/projectA/" },
       { text: "영상 스토리보드 보기", link: "https://drive.google.com/file/d/150jNPMyDx24NxEDgknYGpfXrazamY8gj/view?usp=sharing" },
       { text: "영상 보기", link: "https://drive.google.com/file/d/1zxNc-q8Sh0XP6I4rlaGMtL4jKt4lab_l/view?usp=sharing" },
-      { text: "사이트 보기", link: "https://carnothia-blip.github.io/projectA/" },
     ],
     description:
       "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
