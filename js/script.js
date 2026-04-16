@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // About 모달 제어
   const aboutModal = document.getElementById("about-modal");
-  const aboutBtn = document.getElementById("nav-about");
+  const aboutBtn = document.getElementById("nav-contact-me");
   const emailLink = document.getElementById("email-link");
   const contactModal = document.getElementById("contact-modal");
 
@@ -329,17 +329,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (aboutBtn && aboutModal) {
+  if (aboutBtn && contactModal) {
     aboutBtn.addEventListener("click", () => {
-      aboutModal.classList.add("is-open");
+      contactModal.classList.add("is-open");
       document.body.style.overflow = "hidden";
-    });
-
-    document
-      .getElementById("about-modal-close")
-      .addEventListener("click", () => closeModal("about-modal"));
-    aboutModal.addEventListener("click", (e) => {
-      if (e.target === e.currentTarget) closeModal("about-modal");
     });
   }
 
