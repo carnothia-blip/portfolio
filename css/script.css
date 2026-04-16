@@ -126,8 +126,27 @@ body {
   position: relative;
   height: 100%;
   gap: 10vw;
-  background: url("./images/me2.png") no-repeat top right;
-  background-size: contain;
+}
+
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: right center;
 }
 
 
@@ -158,18 +177,30 @@ body {
 }
 .ani1 {
   position: relative;
-  span.acc {
-    font-size: 5rem;
-    font-weight: 200;
-    width: 100%;
-  }
+}
 
-  span.s {
-    font-size: 2rem;
-    position: absolute;
-    right: 30%;
-    bottom: 40%;
-  }
+.ani1 span.acc {
+  font-size: 5rem;
+  font-weight: 200;
+  width: 100%;
+}
+
+.ani1 span.s {
+  font-size: 2rem;
+  position: absolute;
+  right: 30%;
+  bottom: 40%;
+}
+
+.ani2 {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.ani2 span.bg {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
 }
 /* gsap */
 
@@ -404,6 +435,11 @@ body {
   }
 
   .hero-image-container {
+    position: static;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
     order: 1;
   }
 

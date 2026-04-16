@@ -126,8 +126,20 @@ body {
   position: relative;
   height: 100%;
   gap: 10vw;
-  background: url("../images/me2.png") no-repeat top right;
-  background-size: contain;
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 
@@ -483,7 +495,7 @@ body {
 /* ── Custom Sections (About Me, Projects) ────── */
 .about-me-section {
   width: 100%;
-  padding: 200px 0 0 0;
+  padding: 150px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
