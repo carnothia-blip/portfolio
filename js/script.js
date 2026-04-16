@@ -40,15 +40,42 @@ const projects = [
   },
   {
     id: 2,
+    title: "VODA OTT 서비스",
+    image: "images/voda1.png",
+    cssFile: "css/voda.css",
+    hasModal: true,
+    buttons: [
+      {
+        text: "기획서",
+        link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1",
+      },
+      { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
+      { text: "개요", link: "" },
+    ],
+    description:
+      "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
+    details: [
+      {
+        label: "기술스택",
+        value: "허깅페이스, TMDB, figma, render, Claude, Gemini",
+      },
+      { label: "배포매체", value: "Desktop, Mobile" },
+      { label: "작업기간", value: "9일" },
+      { label: "본인 기여도", value: "16%" },
+      {
+        label: "특징",
+        value: "TMDB와 허깅페이스의 API 연결과 AI챗봇을 활용한 OTT 서비스 구축",
+      },
+    ],
+    images: ["images/voda.png"],
+  },
+  {
+    id: 3,
     title: "이케아 리디자인",
     image: "images/ikea2.png",
     cssFile: "css/ikea.css",
     hasModal: true,
     buttons: [
-      {
-        text: "기획서",
-        link: "https://www.figma.com/deck/pdz54n6EeAHUITbc8Tl6az",
-      },
       {
         text: "사이트",
         link: "https://carnothia-blip.github.io/projectA/",
@@ -78,7 +105,7 @@ const projects = [
     images: ["images/ikea_main.png"],
   },
   {
-    id: 3,
+    id: 4,
     title: "고양이 에버랜드",
     image: "images/cat3.png",
     cssFile: "css/everland.css",
@@ -110,61 +137,6 @@ const projects = [
       { label: "특징", value: "AI를 이용한 영상제작" },
     ],
     images: ["images/cat_merry_go_round.png"],
-  },
-  {
-    id: 4,
-    title: "에그앤씨드 리디자인",
-    image: "images/eyrie1.png",
-    cssFile: "css/EggnSeed.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "사이트",
-        link: "https://carnothia-blip.github.io/ProjectB/",
-      },
-      { text: "개요", link: "" },
-    ],
-    description:
-      "바이브코딩을 사용하여 에그앤씨드 아이리 사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
-    details: [
-      { label: "기술스택", value: "Whisk, Claude, Gemini" },
-      { label: "배포매체", value: "Desktop, Mobile" },
-      { label: "작업기간", value: "2일" },
-      { label: "본인 기여도", value: "100%" },
-      { label: "특징", value: "바이브코딩으로 구현" },
-    ],
-    images: ["images/Eyrie_main.png"],
-  },
-  {
-    id: 5,
-    title: "VODA OTT 서비스",
-    image: "images/voda1.png",
-    cssFile: "css/voda.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "기획서",
-        link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1",
-      },
-      { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
-      { text: "개요", link: "" },
-    ],
-    description:
-      "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
-    details: [
-      {
-        label: "기술스택",
-        value: "허깅페이스, TMDB, figma, render, Claude, Gemini",
-      },
-      { label: "배포매체", value: "Desktop, Mobile" },
-      { label: "작업기간", value: "9일" },
-      { label: "본인 기여도", value: "16%" },
-      {
-        label: "특징",
-        value: "TMDB와 허깅페이스의 API 연결과 AI챗봇을 활용한 OTT 서비스 구축",
-      },
-    ],
-    images: ["images/voda.png"],
   },
 ];
 
