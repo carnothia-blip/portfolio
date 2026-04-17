@@ -429,6 +429,9 @@ body {
   .project-grid { grid-template-columns: 1fr; row-gap: 2rem; }
   .work-section { padding: 2rem 1.5rem; }
 
+  .footer { padding: 60px 0; }
+  .footer-text { font-size: 2.2rem; }
+
   .modal-overlay { padding: 1rem; align-items: flex-end; }
   .modal-container { max-height: 90vh; border-radius: 12px 12px 0 0; }
   .modal-content { padding: 1rem 1.25rem 2rem; }
@@ -541,3 +544,20 @@ body {
 .about-info-item, .cert-item { display: flex; align-items: center; gap: 8px; }
 .about-info-label, .edu-date, .cert-date { color: #555555; font-size: 16px; }
 .about-info-value, .edu-desc, .cert-name { color: #747474; font-size: 16px; }
+
+/* Footer */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  border-top: 0.5px solid var(--border);
+  background-color: var(--bg);
+}
+
+.footer-text {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--brown-dark);
+}

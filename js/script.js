@@ -8,7 +8,7 @@ const projects = [
     buttons: [
       {
         text: "기획서",
-        link: "https://www.figma.com/deck/fLRmIylMudtVClnFb2qGMi",
+        link: "https://drive.google.com/file/d/1kq-3aIPi8TeXgbd6DFpRPruhrAkXgnEO/view?usp=sharing",
       },
       {
         text: "프로토타입",
@@ -47,7 +47,7 @@ const projects = [
     buttons: [
       {
         text: "기획서",
-        link: "https://docs.google.com/presentation/d/1mhoTj0WaSNQlylPvAlAmw0hqdvfDlEh9/edit?slide=id.p1#slide=id.p1",
+        link: "https://drive.google.com/file/d/1_ek7_7agyFZ0nA7FiF5cvPQVqFyuX4j3/view?usp=sharing",
       },
       { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
       { text: "개요", link: "" },
@@ -113,7 +113,7 @@ const projects = [
     buttons: [
       {
         text: "기획서",
-        link: "https://docs.google.com/presentation/d/1rC1pyTt11BtHd7DGCzfuen5x6_ZLcO5g/edit?usp=sharing&ouid=101785610843370507682&rtpof=true&sd=true",
+        link: "https://drive.google.com/file/d/1217ayIyg-F-oxGDBxJhN_dnnKMnS2_hX/view?usp=sharing",
       },
       {
         text: "영상 스토리보드",
