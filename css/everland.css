@@ -1,17 +1,7 @@
 /* everland — 프로젝트 모달 스타일 */
 
-#modal-content .modal-title {
-    color: #5C4033;
-}
-
-#modal-content .modal-header {
-    border-bottom-color: #E8E2D8;
-}
-
-#modal-content .modal-detail-label {
-    color: #C4956A;
-}
-
-#modal-content .modal-project-image {
-    border-color: #E8E2D8;
+#modal-content {
+    --modal-title: #5C4033;
+    --modal-accent: #C4956A;
+    --modal-border: #E8E2D8;
 }

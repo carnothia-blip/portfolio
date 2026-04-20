@@ -1,213 +1,29 @@
-const projects = [
-  {
-    id: 1,
-    title: "브루다커피 리디자인",
-    image: "images/brewdaa.png",
-    cssFile: "css/brewda.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "기획서",
-        link: "https://drive.google.com/file/d/1kq-3aIPi8TeXgbd6DFpRPruhrAkXgnEO/view?usp=sharing",
-      },
-      {
-        text: "프로토타입",
-        link: "https://www.figma.com/proto/a7ypZWAQMTE4NtIf8HpwnU/3%ED%8C%80-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8?node-id=4-2&p=f&viewport=869%2C591%2C0.09&t=oqjoSrRrrPwwUn1t-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4%3A59&page-id=0%3A1",
-      },
-      {
-        text: "영상 스토리보드",
-        link: "https://drive.google.com/file/d/1VtCktllckXHneOwL14FuqF0Z4pwQhnhd/view?usp=sharing",
-      },
-      {
-        text: "영상",
-        link: "https://drive.google.com/file/d/1wn4oqjrEmOkdaFK_wG-8DF93EXFZ3Epk/view?usp=drive_link",
-      },
-      { text: "개요", link: "" },
-    ],
-    description:
-      "브루다커피의 브랜드 아이덴티티를 살리면서 사용자 경험을 개선한 리디자인 프로젝트입니다.",
-    details: [
-      {
-        label: "기술스택",
-        value: "Figma, Kling, Premiere Pro, Claude, Gemini",
-      },
-      { label: "배포매체", value: "Mobile" },
-      { label: "작업기간", value: "2주" },
-      { label: "본인 기여도", value: "25%" },
-      { label: "특징", value: "접근성 준수/원터치 주문결제" },
-    ],
-    images: ["images/brewda2.png"],
-  },
-  {
-    id: 2,
-    title: "VODA OTT 서비스",
-    image: "images/voda1.png",
-    cssFile: "css/voda.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "기획서",
-        link: "https://drive.google.com/file/d/1_ek7_7agyFZ0nA7FiF5cvPQVqFyuX4j3/view?usp=sharing",
-      },
-      { text: "영상", link: "https://drive.google.com/file/d/1K3rGeviC4wPfg6-1nYvhSe8VRf7XCJtg/view?usp=sharing" },
-      { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
-      { text: "개요", link: "" },
-    ],
-    description:
-      "TMDB, 허깅페이스 API를 연동해 실시간 영화정보 열람 및 구독 시청이 가능한 팀 프로젝트 OTT 구독서비스 VODA입니다.",
-    details: [
-      {
-        label: "기술스택",
-        value: "허깅페이스, TMDB, figma, render, Claude, Gemini",
-      },
-      { label: "배포매체", value: "Desktop, Mobile" },
-      { label: "작업기간", value: "9일" },
-      { label: "본인 기여도", value: "16%" },
-      {
-        label: "특징",
-        value: "TMDB와 허깅페이스의 API 연결과 AI챗봇을 활용한 OTT 서비스 구축",
-      },
-    ],
-    images: ["images/voda.png"],
-  },
-  {
-    id: 3,
-    title: "이케아 리디자인",
-    image: "images/ikea2.png",
-    cssFile: "css/ikea.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "사이트",
-        link: "https://carnothia-blip.github.io/projectA/",
-      },
-      {
-        text: "영상 스토리보드",
-        link: "https://drive.google.com/file/d/150jNPMyDx24NxEDgknYGpfXrazamY8gj/view?usp=sharing",
-      },
-      {
-        text: "영상",
-        link: "https://drive.google.com/file/d/1zxNc-q8Sh0XP6I4rlaGMtL4jKt4lab_l/view?usp=sharing",
-      },
-      { text: "개요", link: "" },
-    ],
-    description:
-      "이케아 웹사이트의 정보 구조와 시각적 계층을 재설계한 리디자인 프로젝트입니다.",
-    details: [
-      {
-        label: "기술스택",
-        value: "Figma, Kling, Premiere Pro, Claude, Gemini",
-      },
-      { label: "배포매체", value: "Desktop, Mobile" },
-      { label: "작업기간", value: "3주" },
-      { label: "본인 기여도", value: "100%" },
-      { label: "특징", value: "메인페이지" },
-    ],
-    images: ["images/ikea_main.png"],
-  },
-  {
-    id: 4,
-    title: "고양이 에버랜드",
-    image: "images/cat3.png",
-    cssFile: "css/everland.css",
-    hasModal: true,
-    buttons: [
-      {
-        text: "기획서",
-        link: "https://drive.google.com/file/d/1217ayIyg-F-oxGDBxJhN_dnnKMnS2_hX/view?usp=sharing",
-      },
-      {
-        text: "영상 스토리보드",
-        link: "https://drive.google.com/file/d/1WBPIBWhSDrPxGNUlW_YSUB6oPQqSpvsx/view?usp=sharing",
-      },
-      {
-        text: "영상",
-        link: "https://drive.google.com/file/d/1IzsA52O3Khc84TLiNudwQUFKNLrXnIru/view?usp=sharing",
-      },
-      { text: "개요", link: "" },
-    ],
-    description: "고양이를 테마로 한 에버랜드 콘셉트 디자인 프로젝트입니다.",
-    details: [
-      {
-        label: "기술스택",
-        value: "Figma, Whisk, Premiere Pro, Gemini, ChatGPT",
-      },
-      { label: "배포매체", value: "Desktop, Mobile" },
-      { label: "작업기간", value: "1주" },
-      { label: "본인 기여도", value: "100%" },
-      { label: "특징", value: "AI를 이용한 영상제작" },
-    ],
-    images: ["images/cat_merry_go_round.png"],
-  },
-];
+function toggleModal(modalId, isOpen) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
 
-function buildModalContent(project) {
-  const detailsHTML = project.details
-    .map(
-      (d) => `
-        <div class="modal-detail-row">
-            <span class="modal-detail-label">${d.label}</span>
-            <span class="modal-detail-value">${d.value}</span>
-        </div>
-    `,
-    )
-    .join("");
-
-  const imagesHTML = project.images
-    .map((src) => {
-      const imgTag = `<img src="${src}" alt="${project.title}" class="modal-project-image">`;
-      if (project.link) {
-        return `
-        <a href="${project.link}" target="_blank" rel="noopener" class="modal-image-link" title="프로젝트 보러가기">
-            ${imgTag}
-            <span class="modal-image-overlay">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-                프로젝트 보러가기
-            </span>
-        </a>`;
-      }
-      return imgTag;
-    })
-    .join("");
-
-  return `
-        <link rel="stylesheet" href="${project.cssFile}">
-        <div class="modal-header">
-            <h2 class="modal-title">${project.title}</h2>
-            <div class="modal-details">${detailsHTML}</div>
-        </div>
-        <div class="modal-images">${imagesHTML}</div>
-        <div class="modal-description">
-            <p>${project.description}</p>
-        </div>
-    `;
+  if (isOpen) {
+    modal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  } else {
+    modal.classList.remove("is-open");
+    // 열려있는 다른 모달이 없는 경우에만 스크롤 복구
+    if (!document.querySelector(".modal-overlay.is-open")) {
+      document.body.style.overflow = "";
+    }
+  }
 }
 
-function openModal(project) {
-  const modal = document.getElementById("project-modal");
+function openProjectModal(project) {
   const content = document.getElementById("modal-content");
   content.innerHTML = buildModalContent(project);
-  modal.classList.add("is-open");
-  document.body.style.overflow = "hidden";
-}
-
-function closeModal(modalId) {
-  const modal = document.getElementById(modalId || "project-modal");
-  modal.classList.remove("is-open");
-  if (!document.querySelector(".modal-overlay.is-open")) {
-    document.body.style.overflow = "";
-  }
+  toggleModal("project-modal", true);
 }
 
 function createProjectCard(project) {
   const card = document.createElement("div");
   card.className = "project-card";
 
-  // 버튼들 생성
   const buttonsHTML = (project.buttons || [])
     .map((btn) => {
       if (btn.text === "개요") {
@@ -227,12 +43,9 @@ function createProjectCard(project) {
         <p class="project-title">${project.title}</p>
     `;
 
-  // "개요" 버튼 클릭 이벤트 연결
   const overviewBtn = card.querySelector(".overview-btn");
   if (overviewBtn && project.hasModal) {
-    overviewBtn.addEventListener("click", (e) => {
-      openModal(project);
-    });
+    overviewBtn.addEventListener("click", () => openProjectModal(project));
   }
 
   return card;
@@ -252,13 +65,9 @@ function animateHeroTitle() {
   const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
 
   paragraphs.forEach((paragraph, index) => {
-    // Split text into characters
     const splitText = new SplitText(paragraph, { type: "chars" });
-    const chars = splitText.chars;
-
-    // Animate characters from bottom to top
     tl.from(
-      chars,
+      splitText.chars,
       {
         duration: 0.5,
         opacity: 0,
@@ -267,29 +76,35 @@ function animateHeroTitle() {
         ease: "power3.out",
       },
       index === 0 ? 0 : ">",
-    ); // 첫 번째는 0에서 시작, 이후는 이전 애니메이션 끝나고 시작
+    );
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // EmailJS 초기화 (본인의 Public Key로 교체하세요)
-  // 예: emailjs.init("abcd1234efgh");
   emailjs.init("M1n0rDtfHwGM-EjRa");
 
   renderProjects();
-
-  // Animate hero title
   animateHeroTitle();
 
-  // 프로젝트 모달 닫기
-  document
-    .getElementById("modal-close")
-    .addEventListener("click", () => closeModal("project-modal"));
-  document.getElementById("project-modal").addEventListener("click", (e) => {
-    if (e.target === e.currentTarget) closeModal("project-modal");
+  // 공통 모달 닫기 이벤트 (data-close 속성 활용 권장되나 현재 구조 유지하며 정리)
+  const closeButtons = [
+    { id: "modal-close", modalId: "project-modal" },
+    { id: "about-modal-close", modalId: "about-modal" },
+    { id: "contact-modal-close", modalId: "contact-modal" },
+  ];
+
+  closeButtons.forEach(({ id, modalId }) => {
+    const btn = document.getElementById(id);
+    const modal = document.getElementById(modalId);
+    if (btn) btn.addEventListener("click", () => toggleModal(modalId, false));
+    if (modal) {
+      modal.addEventListener("click", (e) => {
+        if (e.target === e.currentTarget) toggleModal(modalId, false);
+      });
+    }
   });
 
-  // 네비게이션 버튼 클릭 시 스크롤 이동 기능
+  // 네비게이션 스크롤
   const scrollTargets = [
     { btnId: "nav-AboutMe", targetId: "about", offset: 50 },
     { btnId: "nav-work", targetId: "work", offset: 100 },
@@ -298,95 +113,61 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollTargets.forEach(({ btnId, targetId, offset }) => {
     const btn = document.getElementById(btnId);
     const target = document.getElementById(targetId);
-
     if (btn && target) {
       btn.addEventListener("click", () => {
-        const headerOffset = offset;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
+        const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
       });
     }
   });
 
-  // About 모달 제어
-  const aboutModal = document.getElementById("about-modal");
-  const aboutBtn = document.getElementById("nav-contact-me");
+  // Contact 모달 열기 제어
+  const contactBtn = document.getElementById("nav-contact-me");
   const emailLink = document.getElementById("email-link");
-  const contactModal = document.getElementById("contact-modal");
 
   if (emailLink) {
     emailLink.addEventListener("click", (e) => {
       e.preventDefault();
-      // 메일 클라이언트를 여는 대신 Contact 모달을 엽니다.
-      closeModal("about-modal");
-      contactModal.classList.add("is-open");
-      document.body.style.overflow = "hidden";
+      toggleModal("about-modal", false);
+      toggleModal("contact-modal", true);
     });
   }
 
-  if (aboutBtn && contactModal) {
-    aboutBtn.addEventListener("click", () => {
-      contactModal.classList.add("is-open");
-      document.body.style.overflow = "hidden";
+  if (contactBtn) {
+    contactBtn.addEventListener("click", () => toggleModal("contact-modal", true));
+  }
+
+  // Contact 폼 제출
+  const contactForm = document.getElementById("contact-form");
+  const submitBtn = document.getElementById("submit-btn");
+
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      submitBtn.disabled = true;
+      const btnText = submitBtn.querySelector("span");
+      btnText.textContent = "Sending...";
+
+      emailjs.sendForm("service_zy7gx5c", "template_2ogdzdf", this)
+        .then(() => {
+          alert("메일이 성공적으로 전송되었습니다!");
+          contactForm.reset();
+          toggleModal("contact-modal", false);
+        })
+        .catch((error) => {
+          alert("전송에 실패했습니다: " + JSON.stringify(error));
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          btnText.textContent = "Send Message";
+        });
     });
   }
 
-  // Contact 모달 제어
-  if (contactModal) {
-    document
-      .getElementById("contact-modal-close")
-      .addEventListener("click", () => closeModal("contact-modal"));
-    contactModal.addEventListener("click", (e) => {
-      if (e.target === e.currentTarget) closeModal("contact-modal");
-    });
-
-    const contactForm = document.getElementById("contact-form");
-    const submitBtn = document.getElementById("submit-btn");
-
-    if (contactForm) {
-      contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        // 전송 중 상태 표시
-        submitBtn.disabled = true;
-        submitBtn.classList.add("loading");
-        submitBtn.querySelector("span").textContent = "Sending...";
-
-        // EmailJS 전송 (본인의 Service ID와 Template ID로 교체하세요)
-        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-        emailjs
-          .sendForm("service_zy7gx5c", "template_2ogdzdf", this)
-          .then(
-            function () {
-              alert("메일이 성공적으로 전송되었습니다!");
-              contactForm.reset();
-              closeModal("contact-modal");
-            },
-            function (error) {
-              alert("전송에 실패했습니다: " + JSON.stringify(error));
-            },
-          )
-          .finally(function () {
-            submitBtn.disabled = false;
-            submitBtn.classList.remove("loading");
-            submitBtn.querySelector("span").textContent = "Send Message";
-          });
-      });
-    }
-  }
-
-  // ESC 키 공통 처리
+  // ESC 키 처리
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      closeModal("project-modal");
-      closeModal("about-modal");
-      closeModal("contact-modal");
+      ["project-modal", "about-modal", "contact-modal"].forEach(id => toggleModal(id, false));
     }
   });
 });

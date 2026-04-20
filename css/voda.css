@@ -1,21 +1,13 @@
 /* VODA 디자인 — 프로젝트 모달 스타일 */
 
-#modal-content .modal-title {
-    color: #7c3aed;
-}
-
-#modal-content .modal-header {
-    border-bottom-color: #ec4899;
-}
-
-#modal-content .modal-detail-label {
-    color: #7c3aed;
+#modal-content {
+    --modal-title: #7c3aed;
+    --modal-accent: #7c3aed;
+    --modal-border: #ec4899;
 }
 
 #modal-content .modal-project-image {
-    border-color: #ec4899;
     background-color: #d4d4d8;
-    object-fit: cover;
 }
 
 /* 메인 카드 이미지 배경색 (카드에 클래스가 있을 경우) */
