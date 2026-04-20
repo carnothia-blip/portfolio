@@ -38,7 +38,8 @@ resume/
 ├── index.html          # 메인 페이지
 ├── css/style.css       # 전체 스타일
 ├── js/script.js        # 프로젝트 렌더링 · 모달 · 애니메이션
-└── images/             # 이미지 에셋
+├── images/             # 이미지 에셋
+└── md/                 # 프로젝트 가이드 및 컨텍스트 (GEMINI.md, SKILL.md 등)
 ```
 
 ## 실행 방법

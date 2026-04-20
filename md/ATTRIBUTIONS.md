@@ -5,7 +5,7 @@ This Figma Make file includes photos from [Unsplash](https://unsplash.com) used 
 
 ## .hero-title
 1. 문단1
-   1. 1.9m급 초거대 모델 LLM^(Large Long Model)
+   1. 1.9m급 초거대 모델 LLM^Large Long Model
 2. 문단2
    1. 환각없는 ‘Jimini’ 도지민입니다.
 
