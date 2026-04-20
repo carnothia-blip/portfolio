@@ -49,6 +49,7 @@ const projects = [
         text: "기획서",
         link: "https://drive.google.com/file/d/1_ek7_7agyFZ0nA7FiF5cvPQVqFyuX4j3/view?usp=sharing",
       },
+      { text: "영상", link: "https://drive.google.com/file/d/1K3rGeviC4wPfg6-1nYvhSe8VRf7XCJtg/view?usp=sharing" },
       { text: "사이트", link: "https://voda-r4s5.onrender.com/" },
       { text: "개요", link: "" },
     ],
