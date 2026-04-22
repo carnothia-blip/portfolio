@@ -14,8 +14,55 @@ function toggleModal(modalId, isOpen) {
   }
 }
 
+function buildModalContent(project) {
+  const detailsHTML = (project.details || [])
+    .map(
+      (detail) => `
+        <div class="modal-detail-row">
+            <span class="modal-detail-label">${detail.label}</span>
+            <span class="modal-detail-value">${detail.value}</span>
+        </div>
+    `,
+    )
+    .join("");
+
+  const imagesHTML = (project.images || [])
+    .map(
+      (img) => `
+        <img src="${img}" alt="${project.title} screenshot" class="modal-project-image">
+    `,
+    )
+    .join("");
+
+  return `
+        <div class="modal-header">
+            <h2 class="modal-title">${project.title}</h2>
+            <div class="modal-details">
+                ${detailsHTML}
+            </div>
+        </div>
+        <div class="modal-images">
+            ${imagesHTML}
+        </div>
+        <div class="modal-description">
+            <p>${project.description}</p>
+        </div>
+    `;
+}
+
 function openProjectModal(project) {
   const content = document.getElementById("modal-content");
+
+  // 프로젝트별 테마 CSS 로드
+  let themeLink = document.getElementById("project-theme-link");
+  if (!themeLink) {
+    themeLink = document.createElement("link");
+    themeLink.id = "project-theme-link";
+    themeLink.rel = "stylesheet";
+    document.head.appendChild(themeLink);
+  }
+  themeLink.href = project.cssFile || "";
+
   content.innerHTML = buildModalContent(project);
   toggleModal("project-modal", true);
 }
