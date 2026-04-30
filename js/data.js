@@ -29,7 +29,7 @@ const projects = [
     details: [
       {
         label: "기술스택",
-        value: "Figma, Kling, Premiere Pro, Claude, Gemini",
+        value: "Figma, Kling, Premiere Pro, After Effect, Claude, Gemini",
       },
       { label: "배포매체", value: "Mobile" },
       { label: "작업기간", value: "2주" },
