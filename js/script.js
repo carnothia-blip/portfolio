@@ -81,8 +81,10 @@ function createProjectCard(project) {
     .join("");
 
   card.innerHTML = `
-        <div class="project-image-wrapper">
-            <img src="${project.image}" alt="${project.title}" class="project-image ${project.imageClass || ""}">
+        <div class="project-card-top">
+            <div class="project-image-wrapper">
+                <img src="${project.image}" alt="${project.title}" class="project-image ${project.imageClass || ""}">
+            </div>
             <div class="project-card-buttons">
                 ${buttonsHTML}
             </div>
